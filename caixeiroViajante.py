@@ -1,6 +1,6 @@
 import time
 def buscaProx(distPercorrida, posicao):
-    cidadeAtual = matrizDistancias[posicao]
+    cidadeAtual =matrizDistancias[posicao]
     menorDistancia = 999999
     cidComMenorDistancia = 0
     cidDisponivel = 1
