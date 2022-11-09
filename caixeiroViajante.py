@@ -1,5 +1,4 @@
 import time
-import os
 inicio = time.time()
 
 
@@ -38,7 +37,8 @@ distPercorrida = 0
 
 distanciaFinal = buscaProx(distPercorrida, 0)
 
-fim = time.time()
+
 print(f"A distância percorrida é de: {distanciaFinal}")
+
+fim = time.time()
 print(f"Tempo gasto: {fim - inicio}, inicio={inicio},fim={fim}")
-os.system("pause")

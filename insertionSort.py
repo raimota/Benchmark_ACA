@@ -1,4 +1,6 @@
 import time
+
+vet = [i for i in range(1000)]
 inicio = time.time()
 
 
@@ -13,11 +15,8 @@ def insertionSort(vet):
         vet[j] = x
 
 
-vet = [2, 1, 10, 8, 5, 7, 3, -1]
-insertionSort(vet)
-print(vet)
-vet.append(-5)
-print(vet)
+# vet = [10, 8, 7, 5, 3, 2, 1, -1]
+# vet = [2, 1, 10, 8, 5, 7, 3, -1]
 insertionSort(vet)
 print(vet)
 fim = time.time()
