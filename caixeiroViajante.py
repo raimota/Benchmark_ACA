@@ -1,4 +1,8 @@
 import time
+import os
+inicio = time.time()
+
+
 def buscaProx(distPercorrida, posicao):
     cidadeAtual = matrizDistancias[posicao]
     menorDistancia = 999999
@@ -15,11 +19,11 @@ def buscaProx(distPercorrida, posicao):
         return distPercorrida
     else:
         visitados[cidComMenorDistancia] = 1
-        distPercorrida = distPercorrida + menorDistancia        
+        distPercorrida = distPercorrida + menorDistancia
         return buscaProx(distPercorrida, cidComMenorDistancia)
-    
-inicio = time.time()
-n = 5 # número de cidades
+
+
+n = 5  # número de cidades
 visitados = [0, 0, 0, 0, 0]
 matrizDistancias = [
     [0, 10, 15, 20, 40],
@@ -35,5 +39,6 @@ distPercorrida = 0
 distanciaFinal = buscaProx(distPercorrida, 0)
 
 fim = time.time()
-print (f"A distância percorrida é de: {distanciaFinal}")
-print (f"Tempo gasto: {fim}")
+print(f"A distância percorrida é de: {distanciaFinal}")
+print(f"Tempo gasto: {fim - inicio}, inicio={inicio},fim={fim}")
+os.system("pause")
